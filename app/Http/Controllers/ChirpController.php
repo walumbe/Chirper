@@ -86,6 +86,6 @@ class ChirpController extends Controller
     {
         $this->authorize('delete', $chirp);
         $chirp->delete();
-        redirect(route('chirps.index'));
+       return redirect(route('chirps.index'));
     }
 }
