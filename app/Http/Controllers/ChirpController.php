@@ -30,7 +30,7 @@ class ChirpController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'message' => 'required|string|max:255'
@@ -42,7 +42,7 @@ class ChirpController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource
      */
     public function show(Chirp $chirp)
     {
