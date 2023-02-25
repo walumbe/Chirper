@@ -11,9 +11,9 @@ class ChirpPolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user, Chirp $chirp): bool
+    public function viewAny(User $user): bool
     {
-        return $chirp->user()->is($user);
+        
     }
 
     /**
@@ -37,7 +37,7 @@ class ChirpPolicy
      */
     public function update(User $user, Chirp $chirp): bool
     {
-        //
+        return $chirp->user()->is($user);
     }
 
     /**
